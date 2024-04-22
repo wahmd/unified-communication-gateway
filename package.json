@@ -8,9 +8,11 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "deploy": "npm run build && cdk deploy"
   },
   "devDependencies": {
+    "@types/aws-sdk": "^2.7.0",
     "@types/jest": "^29.5.12",
     "@types/node": "20.11.30",
     "aws-cdk": "2.136.0",
@@ -21,12 +23,15 @@
   },
   "dependencies": {
     "@aws-cdk/aws-apigateway": "^1.204.0",
+    "@aws-cdk/aws-dynamodb": "^1.204.0",
     "@aws-cdk/aws-iam": "^1.204.0",
     "@aws-cdk/aws-lambda": "^1.204.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.204.0",
     "@aws-cdk/aws-servicediscovery": "^1.204.0",
     "@aws-cdk/aws-sns": "^1.204.0",
     "@aws-cdk/aws-sqs": "^1.204.0",
     "aws-cdk-lib": "2.136.0",
+    "aws-sdk": "^2.1603.0",
     "constructs": "^10.0.0",
     "source-map-support": "^0.5.21"
   }
